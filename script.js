@@ -1,8 +1,10 @@
 import Contact from "./Contact.js";
-
+import HeaderMessage from "./HeaderMessage.js";
 const formInfo = document.querySelector(".form__info");
 const contactForm = document.querySelector(".form--contact");
 const experiences = document.getElementsByClassName("experience__block");
+const headerMessage = new HeaderMessage();
+window.addEventListener("load", headerMessage.start());
 
 let hasJob = false;
 if (hasJob) {
