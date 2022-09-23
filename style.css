@@ -1,122 +1,145 @@
 * {
-    box-sizing: border-box;
-    resize: none;
+  box-sizing: border-box;
+  resize: none;
 }
 
-.page{
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+.page {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-.page__container{
-    display: grid;
-    grid-template-areas:
+.page__container {
+  display: grid;
+  grid-template-areas:
     "header header"
     "experience form__container"
     "footer footer";
-    grid-template-columns: auto min(300px, 30%);
-    gap: 1rem;
+  grid-template-columns: auto min(300px, 30%);
+  gap: 1rem;
 }
-h1,h2 {
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    color: rgb(8, 11, 97);
-}
-
-.header{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    grid-area: header;
-}
-.header__image{
-    max-width: 50px;
-    border-radius: 50%;
-    margin: 10px;
-    padding: 2px;
-    border: 1px solid #808080;
+h1,
+h2 {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  color: rgb(8, 11, 97);
 }
 
-.header__title, .header__image, .header__nav{
-    display: inline;
-    vertical-align: middle;
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  grid-area: header;
+}
+.header__image {
+  max-width: 50px;
+  border-radius: 50%;
+  margin: 10px;
+  padding: 2px;
+  border: 1px solid #808080;
 }
 
-.header__nav{
-    float: right;
-    margin-left: auto;
+.header__title,
+.header__image,
+.header__nav {
+  display: inline;
+  vertical-align: middle;
 }
 
-.nav__item{
-    display: inline;
-    padding: 8px;
-    background-color: rgb(29, 27, 27);
+.header__nav {
+  float: right;
+  margin-left: auto;
 }
 
-.nav__item.active{
-    background-color: darkslateblue;
+.nav__item {
+  display: inline-block;
+  padding: 8px;
+  background-color: rgb(29, 27, 27);
 }
 
-.nav__item a{
-    color: white;
-    text-decoration: none;
+.nav__item.active {
+  background-color: darkslateblue;
 }
 
-.block__title{
-    font-weight: 600;
-}
-.experience{
-    background-color: rgb(197, 197, 197);
-    padding: .5rem;
-    grid-area: experience;
+.nav__item a {
+  color: white;
+  text-decoration: none;
 }
 
-.experience__block{
-    border: inset 1px;
-    margin-bottom: 4px;
-    padding: 4px;
-    background-color: white;
-    color:#222;
+.block__title {
+  font-weight: 600;
 }
-.form{
-    display: flex;
-    flex-direction: column;
+.experience {
+  background-color: rgb(197, 197, 197);
+  padding: 1rem;
+  grid-area: experience;
 }
-
-.form__container{
-    grid-area: form__container;
+.experience__block:hover {
+  background-color: #999999;
 }
 
-.form__block{
-    display: flex;
-    flex-direction: column;
-    margin-top: 5px;
+.experience__block {
+  border: inset 1px;
+  margin-bottom: 4px;
+  padding: 4px;
+  background-color: white;
+  color: #222;
+}
+.form {
+  display: flex;
+  flex-direction: column;
 }
 
-.form__submit{
-    margin-top: 5px;
+.form__container {
+  grid-area: form__container;
 }
 
-.block__item{
-    margin-block: 2px;
-    padding: .5rem;
+.form__block {
+  display: flex;
+  flex-direction: column;
+  margin-top: 5px;
 }
 
-.form__submit{
-    background-color: rgb(18, 53, 23);
-    border-radius: 2px;
-    border-width: 1px;
-    padding: .5rem;
-    color: rgb(162, 144, 144);
-    margin-bottom: 1rem;
+.form__submit {
+  margin-top: 5px;
 }
 
-.footer{
-    width: 100%;
-    background-color: #202020;
-    color: lightblue;
-    text-align: center;
-    padding: 2px;
-    position: fixed;
-    bottom:0;
-    left:0;
-    grid-area: footer;
+.block__item {
+  margin-block: 2px;
+  padding: 0.5rem;
+}
+
+.form__submit {
+  background-color: rgb(18, 53, 23);
+  border-radius: 2px;
+  border-width: 1px;
+  padding: 0.5rem;
+  color: rgb(162, 144, 144);
+  margin-bottom: 1rem;
+}
+
+.form__info {
+  font-style: italic;
+  font-size: 0.75rem;
+  color: lightgray;
+}
+
+.footer {
+  width: 100%;
+  background-color: #202020;
+  color: lightblue;
+  text-align: center;
+  padding: 2px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  grid-area: footer;
+}
+
+@media screen and (max-width: 700px) {
+  .page__container {
+    grid-template-areas:
+      "header"
+      "experience"
+      "form__container"
+      "footer";
+    grid-template-columns: auto;
+  }
 }
