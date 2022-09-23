@@ -5,69 +5,84 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Frontend Learning - Resume - Home</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body class="page">
-    <header class="header page__header">
-      <div>
+    <div class="page__container">
+      <header class="header page__header">
+        <img src="images/headshot.png" class="header__image" />
         <h1 class="header__title">Marc Nicdao</h1>
-      <img src="images/headshot.png" class="header__image" />
-      </div>
 
-      <ul class="header__nav">
-        <li class="nav__item"><a href="index.html">Home</a></li>
-        <li class="nav__item"><a href="about.html">About</a></li>
-        <li class="nav__item"><a href="privacy.html">Privacy</a></li>
-      </ul>
-    </header>
+        <ul class="header__nav">
+          <li class="nav__item active"><a href="index.html">Home</a></li>
+          <li class="nav__item"><a href="about.html">About</a></li>
+          <li class="nav__item"><a href="privacy.html">Privacy</a></li>
+        </ul>
+      </header>
 
-    <main class="experience">
-      <p class="experience__description">
-        <strong>Purpose:</strong> This is a resume (or CV) to help me get a job
-        in web development
-      </p>
+      <main class="experience">
+        <p class="experience__description">
+          <strong>Purpose:</strong> This is a resume (or CV) to help me get a
+          job in web development
+        </p>
 
-      <h2 class="experience__title">Experience</h2>
+        <h2 class="experience__title">Experience</h2>
 
-      <div class="experience__block">
-        <p class="block__title">Facebook(META) - 2018- 2022</p>
-        <p>Senior Software Engineer</p>
-      </div>
-
-      <div class="experience__block">
-        <p class="block__title">Google - 2016-2017</p>
-        <p>Junior Developer</p>
-      </div>
-    </main>
-
-    <aside class="form__container">
-      <h2 class="form__title">Contact Me</h2>
-      <form class="form form--contact">
-        <div class="form__block">
-          <label class="form__label block__item" for="fullName">Full Name</label>
-          <input class="form__input block__item" id="fullName" type="text" placeholder="Full Name" />
+        <div class="experience__block">
+          <p class="block__title">Facebook(META) - 2018- 2022</p>
+          <p>Senior Software Engineer</p>
         </div>
-        <div class="form__block">
-          <label class="form__input block__item" for="email">Email</label>
-          <input class="form__input block__item" id="email" type="email" placeholder="Email"/>
+
+        <div class="experience__block">
+          <p class="block__title">Google - 2016-2017</p>
+          <p>Junior Developer</p>
         </div>
-        <div class="form__block">
+      </main>
+
+      <aside class="form__container">
+        <h2 class="form__title">Contact Me</h2>
+        <form class="form form--contact">
+          <div class="form__block">
+            <label class="form__label block__item" for="fullName"
+              >Full Name</label
+            >
+            <input
+              class="form__input block__item"
+              id="fullName"
+              type="text"
+              placeholder="Full Name"
+            />
+          </div>
+          <div class="form__block">
+            <label class="form__input block__item" for="email">Email</label>
+            <input
+              class="form__input block__item"
+              id="email"
+              type="email"
+              placeholder="Email"
+            />
+          </div>
+          <div class="form__block">
             <label class="form__label block__item" for="subject">Subject</label>
             <select class="block__item" id="subject">
-                <option value="">Job Offer</option>
-                <option value="">Personal Message</option>
-                <option value="">Complaint</option>
+              <option value="">Job Offer</option>
+              <option value="">Personal Message</option>
+              <option value="">Complaint</option>
             </select>
-        </div>
-        <div class="form__block">
+          </div>
+          <div class="form__block">
             <label class="form__label block__item" for="msg">Message</label>
-            <textarea class="block__item" id="msg" placeholder="Enter message..." ></textarea>
-        </div>
-        <input class="form__submit" value="Send Mail" type="submit">
+            <textarea
+              class="block__item"
+              id="msg"
+              placeholder="Enter message..."
+            ></textarea>
+          </div>
+          <input class="form__submit" value="Send Mail" type="submit" />
+        </form>
+      </aside>
 
-      </form>
-    </aside>
-
-    <footer class="footer">&copy; 2022 Copyright - Marc Nicdao</footer>
+      <footer class="footer">&copy; 2022 Copyright - Marc Nicdao</footer>
+    </div>
   </body>
 </html>
