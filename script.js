@@ -1,3 +1,5 @@
+import Contact from "./Contact.js";
+
 const formInfo = document.querySelector(".form__info");
 const contactForm = document.querySelector(".form--contact");
 const experiences = document.getElementsByClassName("experience__block");
@@ -32,10 +34,10 @@ function clearMessage() {
 
 function sendMessage(event) {
   event.preventDefault();
-  showMessage("Please wait, sending your email");
+  const contact = new Contact(contactForm);
+  contact.send();
 }
 
 for (let experience of experiences) {
-  console.log(experience);
   experience.addEventListener("mouseenter", function (event) {});
 }
